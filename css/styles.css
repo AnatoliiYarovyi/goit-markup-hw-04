@@ -111,7 +111,20 @@ img {
 
 /* main */ /* ---------------- Герой ------------- */
 .hero {
+  width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--ftr-bgcolor);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/hero.jpg');
+
   color: var(--white-color);
   text-align: center;
 }
@@ -176,6 +189,28 @@ img {
 .benefits-list .item,
 .staff-list .item {
   width: calc((100% - 30px * 3) / 4);
+}
+.benefits-list .item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.benefits-list .item:nth-child(1)::before {
+  background-image: url('../images/svg/antenna-1.svg');
+}
+.benefits-list .item:nth-child(2)::before {
+  background-image: url('../images/svg/clock-2.svg');
+}
+.benefits-list .item:nth-child(3)::before {
+  background-image: url('../images/svg/pc-3.svg');
+}
+.benefits-list .item:nth-child(4)::before {
+  background-image: url('../images/svg/astronaut-4.svg');
 }
 .benefits-list .item:not(:last-child) {
   margin-right: 30px;
